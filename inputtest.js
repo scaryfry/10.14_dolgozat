@@ -34,5 +34,23 @@ console.log(factorial(number))
 console.log(digitsAverage(268));
 //4.feladat
 function threeRuls() {
-    
+    let result = "";
+    let baserule = 1;
+    let ruleNow = 1;
+    for(let i = 1; i < 51; i++){
+        if(i % 3 == 0 && baserule == ruleNow){
+            baserule++;
+            ruleNow = 1;
+            continue;
+        }
+        else if (i % 3 == 0){
+            ruleNow++;
+            result += `${i}, `
+        }
+        else{
+            result += `${i} `
+        }
     }
+    return result;
+    }
+    console.log(threeRuls())
